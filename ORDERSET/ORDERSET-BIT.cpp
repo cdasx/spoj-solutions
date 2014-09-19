@@ -1,9 +1,12 @@
 /*
  * Description	: An accepted solution to the SPOJ problem ORDERSET (http://www.spoj.com/problems/ORDERSET/)
  *		  This version uses Binary Indexed Trees (BITs); to know more, read FENWICK - http://pdf.aminer.org/001/073/976/a_new_data_structure_for_cumulative_frequency_tables.pdf
- *		  This version runs in O(n * log n) where n is the upper bound on the count of numbers that can be passed
- *		  as arguments to INSERT(S,x) or COUNT(S,x) -- the "keys". This is essentially the maximum possible number of 
- *		  queries. The O(n * log n) bound is mainly due to the step in which keys are sorted.
+ *		  This version constructs the BIT in O(n * log n) where n is the upper bound on the count of numbers that 
+ *		  can be passed as arguments to INSERT(S,x) or COUNT(S,x) -- the "keys". This is essentially the maximum 
+ *		  possible number of queries. The O(n * log n) bound is mainly due to the step in which keys are sorted. 
+ *		  
+ *		  INSERT, DELETE and COUNT operations run in O(log n), and K-TH runs in O(n). K-TH has
+ *		  a much better average-case performance.
  *
  * Author	: Chitharanjan Das
  * Date		: Sept 19, 2014
